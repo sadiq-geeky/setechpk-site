@@ -60,12 +60,61 @@ export default function Index() {
             Transform your customer relationships and boost productivity with our flagship CRM platform.
           </p>
           <div className="flex justify-center">
-            <Button size="lg" className="text-lg px-8 py-6" asChild>
-              <a href="https://crm-setech.cloud" target="_blank" rel="noopener noreferrer">
-                Try SetCRM Free
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="text-lg px-8 py-6">
+                  Try SetCRM Free
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Demo Login Credentials</DialogTitle>
+                  <DialogDescription>
+                    Use these credentials to access the SetCRM demo environment
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Username</label>
+                    <div className="flex items-center space-x-2">
+                      <div className="flex-1 p-3 bg-muted rounded-md font-mono text-sm">demo</div>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => copyToClipboard('demo', 'username')}
+                      >
+                        <Copy className="h-4 w-4" />
+                        {copiedField === 'username' ? 'Copied!' : 'Copy'}
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Password</label>
+                    <div className="flex items-center space-x-2">
+                      <div className="flex-1 p-3 bg-muted rounded-md font-mono text-sm">demo</div>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => copyToClipboard('demo', 'password')}
+                      >
+                        <Copy className="h-4 w-4" />
+                        {copiedField === 'password' ? 'Copied!' : 'Copy'}
+                      </Button>
+                    </div>
+                  </div>
+                  <Button
+                    className="w-full"
+                    asChild
+                  >
+                    <a href="https://crm-setech.cloud" target="_blank" rel="noopener noreferrer">
+                      Open SetCRM Demo
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </section>
