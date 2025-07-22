@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { ArrowRight, BarChart3, Building2, CheckCircle, Contact, Copy, Globe, Mail, MapPin, Phone, Shield, Star, Users, Zap } from "lucide-react";
+import { ArrowRight, BarChart3, Building2, CheckCircle, Contact, Copy, Globe, Mail, MapPin, Phone, Shield, Star, Users, Zap, Menu, Search, User } from "lucide-react";
 import { useState } from "react";
 
 export default function Index() {
@@ -19,52 +19,368 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/10 to-background">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
+      <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Building2 className="h-6 w-6 text-primary-foreground" />
+                <Building2 className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-foreground">SE TECH</h1>
-                <p className="text-xs text-muted-foreground">Pvt Ltd</p>
+                <h1 className="text-2xl font-bold text-gray-900">SE TECH</h1>
               </div>
             </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
-              <a href="#products" className="text-muted-foreground hover:text-primary transition-colors">Products</a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
+            <div className="hidden lg:flex items-center space-x-8">
+              <a href="#products" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">Products</a>
+              <a href="#about" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">Company</a>
+              <a href="#contact" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">Resources</a>
+              <a href="#contact" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">Partners</a>
             </div>
-            <Button>Get Started</Button>
+            <div className="flex items-center space-x-4">
+              <Search className="h-5 w-5 text-gray-500 cursor-pointer hover:text-gray-700" />
+              <User className="h-5 w-5 text-gray-500 cursor-pointer hover:text-gray-700" />
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-medium">
+                    Get started
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>Demo Login Credentials</DialogTitle>
+                    <DialogDescription>
+                      Use these credentials to access the SetCRM demo environment
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Username</label>
+                      <div className="flex items-center space-x-2">
+                        <div className="flex-1 p-3 bg-muted rounded-md font-mono text-sm">demo</div>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          onClick={() => copyToClipboard('demo', 'username')}
+                        >
+                          <Copy className="h-4 w-4" />
+                          {copiedField === 'username' ? 'Copied!' : 'Copy'}
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Password</label>
+                      <div className="flex items-center space-x-2">
+                        <div className="flex-1 p-3 bg-muted rounded-md font-mono text-sm">demo</div>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          onClick={() => copyToClipboard('demo', 'password')}
+                        >
+                          <Copy className="h-4 w-4" />
+                          {copiedField === 'password' ? 'Copied!' : 'Copy'}
+                        </Button>
+                      </div>
+                    </div>
+                    <Button 
+                      className="w-full" 
+                      asChild
+                    >
+                      <a href="https://crm-setech.cloud" target="_blank" rel="noopener noreferrer">
+                        Open SetCRM Demo
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="container mx-auto px-4 py-20">
-        <div className="text-center max-w-4xl mx-auto">
-          <Badge variant="secondary" className="mb-4">
-            <Star className="w-3 h-3 mr-1" />
-            Leading CRM Solutions
-          </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Streamline Your Business with
-            <span className="text-primary"> SetCRM</span>
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            A results-driven company dedicated to helping clients achieve their goals through innovative software solutions. 
-            Transform your customer relationships and boost productivity with our flagship CRM platform.
-          </p>
-          <div className="flex justify-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-orange-100/20 to-pink-100/30"></div>
+        <div className="relative container mx-auto px-6 py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                  Introducing
+                  <br />
+                  <span className="text-primary">SetCRM</span>
+                  <br />
+                  Business AI
+                </h1>
+                <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed">
+                  Take your customer experience to the next level with SetCRM AI Studio and SetCRM Business Intelligence
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg rounded-full font-medium">
+                  Explore AI Studio
+                </Button>
+                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg rounded-full font-medium">
+                  Get started →
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative z-10">
+                <div className="w-full h-96 bg-gradient-to-br from-primary/20 via-orange-200/40 to-pink-200/30 rounded-3xl backdrop-blur-sm border border-white/20 shadow-2xl">
+                  <div className="absolute inset-4 bg-white/60 rounded-2xl backdrop-blur-sm">
+                    <div className="p-8 space-y-6">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                          <BarChart3 className="h-6 w-6 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900">SetCRM Analytics</h3>
+                          <p className="text-sm text-gray-600">Real-time insights</p>
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="h-2 bg-primary/20 rounded-full">
+                          <div className="h-2 bg-primary rounded-full w-3/4"></div>
+                        </div>
+                        <div className="h-2 bg-primary/20 rounded-full">
+                          <div className="h-2 bg-primary rounded-full w-1/2"></div>
+                        </div>
+                        <div className="h-2 bg-primary/20 rounded-full">
+                          <div className="h-2 bg-primary rounded-full w-5/6"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-primary to-orange-400 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-gradient-to-br from-pink-400 to-primary opacity-20 blur-xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Why Choose SetCRM?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Powerful features designed to enhance efficiency and productivity for businesses of all sizes
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white">
+              <CardHeader className="pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mb-6">
+                  <Users className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-gray-900">Contact Management</CardTitle>
+                <CardDescription className="text-gray-600 text-lg leading-relaxed">
+                  Centralize and organize all customer information, communication history, and interactions in one intelligent platform
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white">
+              <CardHeader className="pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mb-6">
+                  <BarChart3 className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-gray-900">Sales Pipeline</CardTitle>
+                <CardDescription className="text-gray-600 text-lg leading-relaxed">
+                  Track leads, manage opportunities, and monitor sales performance with advanced AI-powered analytics and forecasting
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white">
+              <CardHeader className="pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mb-6">
+                  <Zap className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-gray-900">AI Automation</CardTitle>
+                <CardDescription className="text-gray-600 text-lg leading-relaxed">
+                  Automate marketing campaigns, workflow processes, and customer support with intelligent AI that learns and adapts
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* SetCRM Features */}
+      <section id="products" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              SetCRM Platform
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive CRM solution built for modern businesses with AI at its core
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+                <CheckCircle className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Lead Management</h3>
+              <p className="text-gray-600">Capture, qualify, and nurture leads through your intelligent sales funnel</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+                <CheckCircle className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Customer Support</h3>
+              <p className="text-gray-600">Manage support tickets and provide exceptional customer service with AI assistance</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+                <CheckCircle className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">AI Analytics</h3>
+              <p className="text-gray-600">Real-time insights and predictive analytics to drive intelligent business decisions</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+                <CheckCircle className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Mobile First</h3>
+              <p className="text-gray-600">Access your CRM data anywhere with our mobile-optimized platform</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+                <CheckCircle className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Marketing AI</h3>
+              <p className="text-gray-600">Create and execute targeted marketing campaigns with intelligent automation</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+                <CheckCircle className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Smart Workflows</h3>
+              <p className="text-gray-600">Streamline business processes with AI-powered customizable workflows</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+                <CheckCircle className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Enterprise Security</h3>
+              <p className="text-gray-600">Bank-level security with AI-powered threat detection and prevention</p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+                <CheckCircle className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Seamless Integration</h3>
+              <p className="text-gray-600">Connect with 1000+ business tools through our intelligent integration platform</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                About SE TECH Pvt Ltd
+              </h2>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                SE Technology is a results-driven company dedicated to helping clients achieve their goals through innovative AI-powered software solutions. 
+                We specialize in developing cutting-edge CRM systems that revolutionize customer relationship management.
+              </p>
+              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                Our flagship product, SetCRM, combines traditional CRM functionality with advanced AI capabilities to enhance efficiency and productivity 
+                for businesses across various industries. We're committed to delivering exceptional service and support to our global clientele.
+              </p>
+              <div className="flex items-center space-x-8">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                    <Shield className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="font-semibold text-gray-900">AI-Powered & Secure</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                    <Globe className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="font-semibold text-gray-900">Global Reach</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-primary/10 via-orange-50 to-pink-50 rounded-3xl p-12">
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-primary mb-3">99.9%</div>
+                    <div className="text-gray-600 font-medium">Uptime Guarantee</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-primary mb-3">24/7</div>
+                    <div className="text-gray-600 font-medium">AI Support</div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-primary to-orange-400 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-pink-400 to-primary opacity-20 blur-xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join thousands of businesses already using SetCRM to revolutionize their customer relationships
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            <Card className="border-0 shadow-xl bg-white">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Mail className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="font-bold text-xl text-gray-900 mb-3">Email Us</h3>
+                <p className="text-gray-600 text-lg">info@setech.pk</p>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-xl bg-white">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Phone className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="font-bold text-xl text-gray-900 mb-3">Call Us</h3>
+                <p className="text-gray-600 text-lg">24/7 AI Support Available</p>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-xl bg-white">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <MapPin className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="font-bold text-xl text-gray-900 mb-3">Visit Us</h3>
+                <p className="text-gray-600 text-lg">Pakistan & Dubai</p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="text-center">
             <Dialog>
               <DialogTrigger asChild>
-                <Button size="lg" className="text-lg px-8 py-6">
-                  Try SetCRM Free
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-full font-medium">
+                  <Contact className="mr-3 h-6 w-6" />
+                  Schedule a Demo
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
@@ -103,8 +419,8 @@ export default function Index() {
                       </Button>
                     </div>
                   </div>
-                  <Button
-                    className="w-full"
+                  <Button 
+                    className="w-full" 
                     asChild
                   >
                     <a href="https://crm-setech.cloud" target="_blank" rel="noopener noreferrer">
@@ -119,229 +435,35 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Choose SetCRM?
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Powerful features designed to enhance efficiency and productivity for businesses of all sizes
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle>Contact Management</CardTitle>
-              <CardDescription>
-                Centralize and organize all customer information, communication history, and interactions in one place
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle>Sales Pipeline</CardTitle>
-              <CardDescription>
-                Track leads, manage opportunities, and monitor sales performance with advanced analytics and forecasting
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle>Automation</CardTitle>
-              <CardDescription>
-                Automate marketing campaigns, workflow processes, and customer support to save time and resources
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
-      </section>
-
-      {/* SetCRM Features */}
-      <section id="products" className="bg-muted/30 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              SetCRM Features
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive CRM solution built for modern businesses
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-background rounded-lg p-6 shadow-sm">
-              <CheckCircle className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold mb-2">Lead Management</h3>
-              <p className="text-sm text-muted-foreground">Capture, qualify, and nurture leads through your sales funnel</p>
-            </div>
-            <div className="bg-background rounded-lg p-6 shadow-sm">
-              <CheckCircle className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold mb-2">Customer Support</h3>
-              <p className="text-sm text-muted-foreground">Manage support tickets and provide exceptional customer service</p>
-            </div>
-            <div className="bg-background rounded-lg p-6 shadow-sm">
-              <CheckCircle className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold mb-2">Analytics & Reporting</h3>
-              <p className="text-sm text-muted-foreground">Real-time insights and detailed reports to drive decisions</p>
-            </div>
-            <div className="bg-background rounded-lg p-6 shadow-sm">
-              <CheckCircle className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold mb-2">Mobile Access</h3>
-              <p className="text-sm text-muted-foreground">Access your CRM data anywhere with our mobile-responsive platform</p>
-            </div>
-            <div className="bg-background rounded-lg p-6 shadow-sm">
-              <CheckCircle className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold mb-2">Marketing Automation</h3>
-              <p className="text-sm text-muted-foreground">Create and execute targeted marketing campaigns automatically</p>
-            </div>
-            <div className="bg-background rounded-lg p-6 shadow-sm">
-              <CheckCircle className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold mb-2">Workflow Management</h3>
-              <p className="text-sm text-muted-foreground">Streamline business processes with customizable workflows</p>
-            </div>
-            <div className="bg-background rounded-lg p-6 shadow-sm">
-              <CheckCircle className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold mb-2">Data Security</h3>
-              <p className="text-sm text-muted-foreground">Enterprise-grade security to protect your sensitive business data</p>
-            </div>
-            <div className="bg-background rounded-lg p-6 shadow-sm">
-              <CheckCircle className="h-8 w-8 text-primary mb-3" />
-              <h3 className="font-semibold mb-2">Integration Ready</h3>
-              <p className="text-sm text-muted-foreground">Seamlessly integrate with your existing business tools and systems</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              About SE TECH Pvt Ltd
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              SE Technology is a results-driven company dedicated to helping clients achieve their goals through innovative software solutions. 
-              We specialize in developing cutting-edge CRM systems that streamline customer relationship management and enhance business efficiency.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Our flagship product, SetCRM, is designed to enhance efficiency and productivity for businesses across various industries. 
-              We're committed to providing exceptional service and support to our clients worldwide.
-            </p>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <Shield className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Secure & Reliable</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Globe className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Global Reach</span>
-              </div>
-            </div>
-          </div>
-          <div className="bg-gradient-to-br from-primary/10 to-accent/20 rounded-2xl p-8">
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
-                <div className="text-sm text-muted-foreground">Uptime</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">Support</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="bg-muted/30 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Get in Touch
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready to transform your business? Contact us today to learn more about SetCRM
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Email Us</h3>
-                <p className="text-muted-foreground">info@setech.pk</p>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Call Us</h3>
-                <p className="text-muted-foreground">Available 24/7</p>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Visit Us</h3>
-                <p className="text-muted-foreground">Pakistan & Dubai</p>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="text-center mt-12">
-            <Button size="lg" className="text-lg px-8 py-6">
-              <Contact className="mr-2 h-5 w-5" />
-              Schedule a Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer className="bg-background border-t">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-12">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <Building2 className="h-5 w-5 text-primary-foreground" />
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                  <Building2 className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-foreground">SE TECH</h3>
-                  <p className="text-xs text-muted-foreground">Pvt Ltd</p>
+                  <h3 className="text-2xl font-bold">SE TECH</h3>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Innovative software solutions for modern businesses.
+              <p className="text-gray-400 leading-relaxed">
+                Innovative AI-powered software solutions for modern businesses.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">SetCRM</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Pricing</a></li>
+              <h4 className="font-bold text-white mb-6 text-lg">Product</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li><a href="#" className="hover:text-primary transition-colors">SetCRM Platform</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">AI Studio</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Analytics</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Integrations</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h4 className="font-bold text-white mb-6 text-lg">Company</h4>
+              <ul className="space-y-3 text-gray-400">
                 <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
                 <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
@@ -349,17 +471,17 @@ export default function Index() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Connect</h4>
+              <h4 className="font-bold text-white mb-6 text-lg">Connect</h4>
               <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center">
-                    <Globe className="h-4 w-4" />
+                <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                  <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary/20">
+                    <Globe className="h-5 w-5" />
                   </div>
                 </a>
               </div>
             </div>
           </div>
-          <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
             <p>&copy; 2024 SE TECH Pvt Ltd. All rights reserved.</p>
           </div>
         </div>
