@@ -170,7 +170,7 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white">
               <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <Users className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-gray-900">Contact Management</CardTitle>
@@ -181,23 +181,23 @@ export default function Index() {
             </Card>
             <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white">
               <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <BarChart3 className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-gray-900">Sales Pipeline</CardTitle>
                 <CardDescription className="text-gray-600 text-lg leading-relaxed">
-                  Track leads, manage opportunities, and monitor sales performance with advanced AI-powered analytics and forecasting
+                  Track leads, manage opportunities, and monitor sales performance with advanced analytics and forecasting
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white">
               <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <Zap className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-gray-900">AI Automation</CardTitle>
+                <CardTitle className="text-2xl text-gray-900">Smart Automation</CardTitle>
                 <CardDescription className="text-gray-600 text-lg leading-relaxed">
-                  Automate marketing campaigns, workflow processes, and customer support with intelligent AI that learns and adapts
+                  Automate marketing campaigns, workflow processes, and customer support with intelligent automation
                 </CardDescription>
               </CardHeader>
             </Card>
