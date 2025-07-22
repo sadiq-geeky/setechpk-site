@@ -101,8 +101,8 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-orange-100/20 to-pink-100/30"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-50">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-blue-100/20 to-indigo-100/30"></div>
         <div className="relative container mx-auto px-6 py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -112,34 +112,45 @@ export default function Index() {
                   <br />
                   <span className="text-primary">SetCRM</span>
                   <br />
-                  Business AI
+                  Business Platform
                 </h1>
                 <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed">
-                  Take your customer experience to the next level with SetCRM AI Studio and SetCRM Business Intelligence
+                  Complete customer relationship management with powerful analytics, lead tracking, and sales intelligence
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg rounded-full font-medium">
-                  Explore AI Studio
+                <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg rounded-lg font-medium">
+                  Explore Platform
                 </Button>
-                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg rounded-full font-medium">
+                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg rounded-lg font-medium">
                   Get started →
                 </Button>
               </div>
             </div>
             <div className="relative">
               <div className="relative z-10">
-                <div className="w-full bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F391ed68dbec64477baa9f3cd25e706c0%2Fe52572f62b09401ba319e06ee1d7d47b?format=webp&width=800"
-                    alt="SetCRM Dashboard showing sales metrics, lead analytics, and user performance charts"
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-orange-100/10 pointer-events-none"></div>
+                <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden p-4">
+                  <div className="bg-gray-50 rounded-xl p-2">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F391ed68dbec64477baa9f3cd25e706c0%2Fe52572f62b09401ba319e06ee1d7d47b?format=webp&width=800"
+                      alt="SetCRM Dashboard showing sales metrics, lead analytics, and user performance charts"
+                      className="w-full h-auto object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                  <div className="absolute top-6 left-6 right-6">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                      <div className="flex-1 bg-gray-100 rounded ml-4 h-6 flex items-center px-3">
+                        <span className="text-xs text-gray-500">crm-setech.cloud</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-primary to-orange-400 rounded-full opacity-20 blur-xl"></div>
-              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-gradient-to-br from-pink-400 to-primary opacity-20 blur-xl"></div>
+              <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-primary to-blue-500 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-gradient-to-br from-indigo-400 to-primary opacity-20 blur-xl"></div>
             </div>
           </div>
         </div>
