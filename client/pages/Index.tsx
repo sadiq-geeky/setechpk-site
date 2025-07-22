@@ -329,20 +329,20 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50/30">
+      <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands of businesses already using SetCRM to revolutionize their customer relationships
+              Experience the power of SetCRM and see how it can revolutionize your customer relationships
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <Card className="border-0 shadow-xl bg-white">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Mail className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl text-gray-900 mb-3">Email Us</h3>
@@ -351,16 +351,16 @@ export default function Index() {
             </Card>
             <Card className="border-0 shadow-xl bg-white">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Phone className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl text-gray-900 mb-3">Call Us</h3>
-                <p className="text-gray-600 text-lg">24/7 AI Support Available</p>
+                <p className="text-gray-600 text-lg">24/7 Support Available</p>
               </CardContent>
             </Card>
             <Card className="border-0 shadow-xl bg-white">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <MapPin className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl text-gray-900 mb-3">Visit Us</h3>
