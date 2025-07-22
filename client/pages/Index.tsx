@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, BarChart3, Building2, CheckCircle, Contact, Globe, Mail, MapPin, Phone, Shield, Star, Users, Zap } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ArrowRight, BarChart3, Building2, CheckCircle, Contact, Copy, Globe, Mail, MapPin, Phone, Shield, Star, Users, Zap } from "lucide-react";
+import { useState } from "react";
 
 export default function Index() {
   return (
