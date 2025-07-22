@@ -129,24 +129,12 @@ export default function Index() {
             </div>
             <div className="relative">
               <div className="relative z-10">
-                <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden p-4">
-                  <div className="bg-gray-50 rounded-xl p-2">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F391ed68dbec64477baa9f3cd25e706c0%2Fe52572f62b09401ba319e06ee1d7d47b?format=webp&width=800"
-                      alt="SetCRM Dashboard showing sales metrics, lead analytics, and user performance charts"
-                      className="w-full h-auto object-cover rounded-lg shadow-lg"
-                    />
-                  </div>
-                  <div className="absolute top-6 left-6 right-6">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                      <div className="flex-1 bg-gray-100 rounded ml-4 h-6 flex items-center px-3">
-                        <span className="text-xs text-gray-500">crm-setech.cloud</span>
-                      </div>
-                    </div>
-                  </div>
+                <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F391ed68dbec64477baa9f3cd25e706c0%2Fe52572f62b09401ba319e06ee1d7d47b?format=webp&width=800"
+                    alt="SetCRM Dashboard showing sales metrics, lead analytics, and user performance charts"
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
               <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-primary to-blue-500 rounded-full opacity-20 blur-xl"></div>
