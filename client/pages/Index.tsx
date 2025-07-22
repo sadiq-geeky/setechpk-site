@@ -38,13 +38,11 @@ export default function Index() {
               <a href="#contact" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">Resources</a>
               <a href="#contact" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">Partners</a>
             </div>
-            <div className="flex items-center space-x-4">
-              <Search className="h-5 w-5 text-gray-500 cursor-pointer hover:text-gray-700" />
-              <User className="h-5 w-5 text-gray-500 cursor-pointer hover:text-gray-700" />
+            <div className="flex items-center">
               <Dialog>
                 <DialogTrigger asChild>
                   <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-medium">
-                    Get started
+                    Demo
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md">
@@ -83,8 +81,8 @@ export default function Index() {
                         </Button>
                       </div>
                     </div>
-                    <Button 
-                      className="w-full" 
+                    <Button
+                      className="w-full"
                       asChild
                     >
                       <a href="https://crm-setech.cloud" target="_blank" rel="noopener noreferrer">
