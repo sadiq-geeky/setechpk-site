@@ -206,72 +206,72 @@ export default function Index() {
       </section>
 
       {/* SetCRM Features */}
-      <section id="products" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50/30">
+      <section id="products" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               SetCRM Platform
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive CRM solution built for modern businesses with AI at its core
+              Comprehensive CRM solution built for modern businesses with powerful analytics and automation
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
               <h3 className="font-bold text-xl text-gray-900 mb-3">Lead Management</h3>
               <p className="text-gray-600">Capture, qualify, and nurture leads through your intelligent sales funnel</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
               <h3 className="font-bold text-xl text-gray-900 mb-3">Customer Support</h3>
-              <p className="text-gray-600">Manage support tickets and provide exceptional customer service with AI assistance</p>
+              <p className="text-gray-600">Manage support tickets and provide exceptional customer service</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold text-xl text-gray-900 mb-3">AI Analytics</h3>
-              <p className="text-gray-600">Real-time insights and predictive analytics to drive intelligent business decisions</p>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Analytics Dashboard</h3>
+              <p className="text-gray-600">Real-time insights and comprehensive analytics to drive business decisions</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold text-xl text-gray-900 mb-3">Mobile First</h3>
-              <p className="text-gray-600">Access your CRM data anywhere with our mobile-optimized platform</p>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Mobile Access</h3>
+              <p className="text-gray-600">Access your CRM data anywhere with our mobile-responsive platform</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold text-xl text-gray-900 mb-3">Marketing AI</h3>
-              <p className="text-gray-600">Create and execute targeted marketing campaigns with intelligent automation</p>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Marketing Automation</h3>
+              <p className="text-gray-600">Create and execute targeted marketing campaigns automatically</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold text-xl text-gray-900 mb-3">Smart Workflows</h3>
-              <p className="text-gray-600">Streamline business processes with AI-powered customizable workflows</p>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Workflow Management</h3>
+              <p className="text-gray-600">Streamline business processes with customizable automated workflows</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold text-xl text-gray-900 mb-3">Enterprise Security</h3>
-              <p className="text-gray-600">Bank-level security with AI-powered threat detection and prevention</p>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Data Security</h3>
+              <p className="text-gray-600">Enterprise-grade security with advanced threat detection and prevention</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <CheckCircle className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold text-xl text-gray-900 mb-3">Seamless Integration</h3>
-              <p className="text-gray-600">Connect with 1000+ business tools through our intelligent integration platform</p>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Integration Hub</h3>
+              <p className="text-gray-600">Connect with hundreds of business tools through our integration platform</p>
             </div>
           </div>
         </div>
