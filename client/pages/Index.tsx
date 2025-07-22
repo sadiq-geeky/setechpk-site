@@ -6,6 +6,18 @@ import { ArrowRight, BarChart3, Building2, CheckCircle, Contact, Copy, Globe, Ma
 import { useState } from "react";
 
 export default function Index() {
+  const [copiedField, setCopiedField] = useState<string | null>(null);
+
+  const copyToClipboard = async (text: string, field: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedField(field);
+      setTimeout(() => setCopiedField(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-accent/10 to-background">
       {/* Navigation */}
