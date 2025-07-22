@@ -45,13 +45,12 @@ export default function Index() {
             A results-driven company dedicated to helping clients achieve their goals through innovative software solutions. 
             Transform your customer relationships and boost productivity with our flagship CRM platform.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6">
-              Try SetCRM Free
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-              Watch Demo
+          <div className="flex justify-center">
+            <Button size="lg" className="text-lg px-8 py-6" asChild>
+              <a href="https://crm-setech.cloud" target="_blank" rel="noopener noreferrer">
+                Try SetCRM Free
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
@@ -189,20 +188,12 @@ export default function Index() {
           <div className="bg-gradient-to-br from-primary/10 to-accent/20 rounded-2xl p-8">
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">500+</div>
-                <div className="text-sm text-muted-foreground">Happy Clients</div>
-              </div>
-              <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
                 <div className="text-sm text-muted-foreground">Uptime</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-2">24/7</div>
                 <div className="text-sm text-muted-foreground">Support</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">5★</div>
-                <div className="text-sm text-muted-foreground">Rating</div>
               </div>
             </div>
           </div>
