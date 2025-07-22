@@ -129,31 +129,13 @@ export default function Index() {
             </div>
             <div className="relative">
               <div className="relative z-10">
-                <div className="w-full h-96 bg-gradient-to-br from-primary/20 via-orange-200/40 to-pink-200/30 rounded-3xl backdrop-blur-sm border border-white/20 shadow-2xl">
-                  <div className="absolute inset-4 bg-white/60 rounded-2xl backdrop-blur-sm">
-                    <div className="p-8 space-y-6">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                          <BarChart3 className="h-6 w-6 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-gray-900">SetCRM Analytics</h3>
-                          <p className="text-sm text-gray-600">Real-time insights</p>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <div className="h-2 bg-primary/20 rounded-full">
-                          <div className="h-2 bg-primary rounded-full w-3/4"></div>
-                        </div>
-                        <div className="h-2 bg-primary/20 rounded-full">
-                          <div className="h-2 bg-primary rounded-full w-1/2"></div>
-                        </div>
-                        <div className="h-2 bg-primary/20 rounded-full">
-                          <div className="h-2 bg-primary rounded-full w-5/6"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="w-full bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F391ed68dbec64477baa9f3cd25e706c0%2Fe52572f62b09401ba319e06ee1d7d47b?format=webp&width=800"
+                    alt="SetCRM Dashboard showing sales metrics, lead analytics, and user performance charts"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-orange-100/10 pointer-events-none"></div>
                 </div>
               </div>
               <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-primary to-orange-400 rounded-full opacity-20 blur-xl"></div>
