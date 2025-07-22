@@ -542,7 +542,10 @@ export default function Index() {
             </Card>
           </div>
           <div className="text-center">
-            <Button className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-full font-medium" asChild>
+            <Button
+              className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-full font-medium"
+              asChild
+            >
               <a
                 href="https://calendly.com/muhammad-sadiq-setech/30min"
                 target="_blank"
