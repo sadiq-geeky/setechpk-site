@@ -309,7 +309,7 @@ export default function Index() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-primary/10 via-orange-50 to-pink-50 rounded-3xl p-12">
+              <div className="bg-gradient-to-br from-primary/10 via-blue-50 to-indigo-50 rounded-3xl p-12">
                 <div className="grid grid-cols-2 gap-8">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-primary mb-3">99.9%</div>
@@ -317,12 +317,12 @@ export default function Index() {
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-bold text-primary mb-3">24/7</div>
-                    <div className="text-gray-600 font-medium">AI Support</div>
+                    <div className="text-gray-600 font-medium">Support</div>
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-primary to-orange-400 rounded-full opacity-20 blur-xl"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-pink-400 to-primary opacity-20 blur-xl"></div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-primary to-blue-500 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-indigo-400 to-primary opacity-20 blur-xl"></div>
             </div>
           </div>
         </div>
