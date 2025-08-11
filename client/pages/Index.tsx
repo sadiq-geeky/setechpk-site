@@ -328,22 +328,27 @@ export default function Index() {
                 Customer Information & KYC Management
               </h3>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Comprehensive customer profiles with identity verification, contact details,
-                and complete interaction history. Track customer status, manage documents,
-                and maintain secure data with built-in compliance features.
+                Comprehensive customer profiles with identity verification,
+                contact details, and complete interaction history. Track
+                customer status, manage documents, and maintain secure data with
+                built-in compliance features.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                     <CheckCircle className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-gray-700">Identity Verification System</span>
+                  <span className="text-gray-700">
+                    Identity Verification System
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                     <CheckCircle className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-gray-700">Complete Customer Profiles</span>
+                  <span className="text-gray-700">
+                    Complete Customer Profiles
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
@@ -378,9 +383,10 @@ export default function Index() {
                 Visual Workflow Designer
               </h3>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Create and manage automated workflows with our intuitive drag-and-drop interface.
-                Design complex business processes, set up triggers, and automate customer
-                interactions with visual workflow components.
+                Create and manage automated workflows with our intuitive
+                drag-and-drop interface. Design complex business processes, set
+                up triggers, and automate customer interactions with visual
+                workflow components.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -399,7 +405,9 @@ export default function Index() {
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                     <CheckCircle className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-gray-700">Custom Triggers & Actions</span>
+                  <span className="text-gray-700">
+                    Custom Triggers & Actions
+                  </span>
                 </div>
               </div>
             </div>
@@ -410,16 +418,19 @@ export default function Index() {
                 Advanced Administration Panel
               </h3>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Comprehensive admin controls with role management, user permissions,
-                system settings, and security configurations. Monitor active sessions,
-                manage modules, and maintain complete control over your CRM environment.
+                Comprehensive admin controls with role management, user
+                permissions, system settings, and security configurations.
+                Monitor active sessions, manage modules, and maintain complete
+                control over your CRM environment.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                     <CheckCircle className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-gray-700">Role & Permission Management</span>
+                  <span className="text-gray-700">
+                    Role & Permission Management
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
@@ -431,7 +442,9 @@ export default function Index() {
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                     <CheckCircle className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-gray-700">Security & Session Management</span>
+                  <span className="text-gray-700">
+                    Security & Session Management
+                  </span>
                 </div>
               </div>
             </div>
@@ -460,16 +473,19 @@ export default function Index() {
                 Customer Service & Complaint Management
               </h3>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Streamlined customer service operations with intelligent complaint tracking,
-                progress monitoring, and automated workflows. Handle customer issues efficiently
-                with detailed activity timelines and priority management.
+                Streamlined customer service operations with intelligent
+                complaint tracking, progress monitoring, and automated
+                workflows. Handle customer issues efficiently with detailed
+                activity timelines and priority management.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                     <CheckCircle className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-gray-700">Intelligent Complaint Tracking</span>
+                  <span className="text-gray-700">
+                    Intelligent Complaint Tracking
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
@@ -481,7 +497,9 @@ export default function Index() {
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                     <CheckCircle className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-gray-700">Activity Timeline & History</span>
+                  <span className="text-gray-700">
+                    Activity Timeline & History
+                  </span>
                 </div>
               </div>
             </div>
