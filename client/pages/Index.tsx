@@ -136,7 +136,7 @@ export default function Index() {
                     </div>
                     <Button className="w-full" asChild>
                       <a
-                        href="https://crm-setech.cloud"
+                        href="https://dev.crm-setech.cloud"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -221,7 +221,7 @@ export default function Index() {
                       </div>
                       <Button className="w-full" asChild>
                         <a
-                          href="https://crm-setech.cloud"
+                          href="https://dev.crm-setech.cloud"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
