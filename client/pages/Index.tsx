@@ -497,7 +497,7 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              SetCRM Platform
+              SetCRM Platform Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive CRM solution built for modern businesses with
