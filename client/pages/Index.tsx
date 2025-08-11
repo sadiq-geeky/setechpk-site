@@ -311,6 +311,184 @@ export default function Index() {
         </div>
       </section>
 
+      {/* CRM Screenshots Showcase */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              See SetCRM in Action
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our powerful CRM features through real interface previews
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                Customer Information & KYC Management
+              </h3>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Comprehensive customer profiles with identity verification, contact details,
+                and complete interaction history. Track customer status, manage documents,
+                and maintain secure data with built-in compliance features.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Identity Verification System</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Complete Customer Profiles</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Secure Data Management</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F5f2388b0663a4797867ae69c9bd81b84%2Fa6bbf78dfe624f6d8c1b3c353fa7aad1?format=webp&width=800"
+                  alt="SetCRM KYC Information interface showing customer details and verification status"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative lg:order-1">
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F5f2388b0663a4797867ae69c9bd81b84%2Fa6b9bc42abcb4e0281f41547afb94cd8?format=webp&width=800"
+                  alt="SetCRM Workflow Designer showing visual workflow management"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            <div className="lg:order-2">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                Visual Workflow Designer
+              </h3>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Create and manage automated workflows with our intuitive drag-and-drop interface.
+                Design complex business processes, set up triggers, and automate customer
+                interactions with visual workflow components.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Drag & Drop Interface</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Process Automation</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Custom Triggers & Actions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                Advanced Administration Panel
+              </h3>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Comprehensive admin controls with role management, user permissions,
+                system settings, and security configurations. Monitor active sessions,
+                manage modules, and maintain complete control over your CRM environment.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Role & Permission Management</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">System Configuration</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Security & Session Management</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F5f2388b0663a4797867ae69c9bd81b84%2Fa60bfd0ba36d497b9927416d880e782d?format=webp&width=800"
+                  alt="SetCRM Administration panel showing role management and system settings"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative lg:order-1">
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F5f2388b0663a4797867ae69c9bd81b84%2Ffcab9bb3ff164352a3186caf41bb901e?format=webp&width=800"
+                  alt="SetCRM Customer Service interface showing complaint management"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            <div className="lg:order-2">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                Customer Service & Complaint Management
+              </h3>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Streamlined customer service operations with intelligent complaint tracking,
+                progress monitoring, and automated workflows. Handle customer issues efficiently
+                with detailed activity timelines and priority management.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Intelligent Complaint Tracking</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Progress Monitoring</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">Activity Timeline & History</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SetCRM Features */}
       <section
         id="products"
