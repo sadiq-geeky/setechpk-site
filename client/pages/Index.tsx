@@ -238,8 +238,8 @@ export default function Index() {
               <div className="relative z-10">
                 <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F391ed68dbec64477baa9f3cd25e706c0%2Fe52572f62b09401ba319e06ee1d7d47b?format=webp&width=800"
-                    alt="SetCRM Dashboard showing sales metrics, lead analytics, and user performance charts"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F5f2388b0663a4797867ae69c9bd81b84%2F3fa2ea4df9cd4283a2956641b31cf7c6?format=webp&width=800"
+                    alt="SetCRM Dashboard showing real-time analytics, customer metrics, and system status"
                     className="w-full h-auto object-cover"
                   />
                 </div>
