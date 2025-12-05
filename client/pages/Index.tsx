@@ -503,7 +503,7 @@ export default function Index() {
                   <Phone className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h4 className="font-semibold mb-1">Phone</h4>
-                    <p className="text-sm text-muted-foreground">+92 300 1234567</p>
+                    <p className="text-sm text-muted-foreground">+92 333 241 3454</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-6 bg-background rounded-xl shadow-sm">

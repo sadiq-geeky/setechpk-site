@@ -4,27 +4,63 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { toast } from "sonner";
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 
 export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [fullname, setFullname] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate form submission
-        setTimeout(() => {
+
+        try {
+            const response = await fetch("https://portal.applynext.io/api/email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    fullname,
+                    email,
+                    subject,
+                    message,
+                }),
+            });
+
+            if (response.ok) {
+                toast.success("Message sent successfully!", {
+                    description: "We'll get back to you as soon as possible.",
+                });
+                setFullname("");
+                setEmail("");
+                setSubject("");
+                setMessage("");
+            } else {
+                toast.error("Failed to send message", {
+                    description: "Please try again later or contact us directly.",
+                });
+            }
+        } catch (error) {
+            console.error("Contact form error:", error);
+            toast.error("Something went wrong", {
+                description: "Please check your connection and try again.",
+            });
+        } finally {
             setIsSubmitting(false);
-            alert("Message sent successfully!");
-        }, 1500);
+        }
     };
 
     return (
         <div className="overflow-hidden">
             <SEO
                 title="Contact Us - Get in Touch with SE TECH"
-                description="Contact SE TECH for software development, CRM/ERP solutions, and technology consulting. Located in Pakistan & Dubai. Email: info@setech.pk | Phone: +92 300 1234567. Schedule a consultation today."
+                description="Contact SE TECH for software development, CRM/ERP solutions, and technology consulting. Located in Pakistan & Dubai. Email: info@setech.pk | Phone: +92 333 241 3454. Schedule a consultation today."
                 keywords="contact SE TECH, software development inquiry, CRM consultation, technology consultation, Pakistan software company, Dubai software company, get in touch, schedule consultation"
             />
             {/* Hero */}
@@ -70,29 +106,8 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-base mb-1">Call Us</h3>
-                                            <p className="text-sm text-muted-foreground">+92 300 1234567</p>
+                                            <p className="text-sm text-muted-foreground">+92 333 241 3454</p>
                                             <p className="text-xs text-muted-foreground mt-1">Mon-Fri from 9am to 6pm</p>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-
-                                <Card className="border-none shadow-md">
-                                    <CardContent className="flex items-start gap-4 p-4">
-                                        <div className="bg-primary/10 p-2.5 rounded-full text-primary">
-                                            <MapPin className="h-5 w-5" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-base mb-1">Visit Us</h3>
-                                            <p className="text-sm text-muted-foreground">
-                                                123 Tech Avenue, Innovation Park<br />
-                                                Lahore, Pakistan
-                                            </p>
-                                            <div className="mt-3 pt-3 border-t">
-                                                <p className="font-semibold mb-1 text-sm">Dubai Office:</p>
-                                                <p className="text-sm text-muted-foreground">
-                                                    456 Business Bay, Dubai, UAE
-                                                </p>
-                                            </div>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -105,18 +120,37 @@ export default function Contact() {
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     <div className="space-y-1.5">
-                                        <Label htmlFor="name">Full Name</Label>
-                                        <Input id="name" placeholder="John Doe" required />
+                                        <Label htmlFor="fullname">Full Name</Label>
+                                        <Input
+                                            id="fullname"
+                                            placeholder="John Doe"
+                                            value={fullname}
+                                            onChange={(e) => setFullname(e.target.value)}
+                                            required
+                                        />
                                     </div>
                                     <div className="space-y-1.5">
                                         <Label htmlFor="email">Email Address</Label>
-                                        <Input id="email" type="email" placeholder="john@example.com" required />
+                                        <Input
+                                            id="email"
+                                            type="email"
+                                            placeholder="john@example.com"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                        />
                                     </div>
                                 </div>
 
                                 <div className="space-y-1.5">
                                     <Label htmlFor="subject">Subject</Label>
-                                    <Input id="subject" placeholder="Project Inquiry" required />
+                                    <Input
+                                        id="subject"
+                                        placeholder="Project Inquiry"
+                                        value={subject}
+                                        onChange={(e) => setSubject(e.target.value)}
+                                        required
+                                    />
                                 </div>
 
                                 <div className="space-y-1.5">
@@ -125,6 +159,8 @@ export default function Contact() {
                                         id="message"
                                         placeholder="Tell us about your project..."
                                         className="min-h-[120px]"
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)}
                                         required
                                     />
                                 </div>
@@ -138,17 +174,6 @@ export default function Contact() {
                                 </Button>
                             </form>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Map Placeholder */}
-            <section className="h-[300px] bg-slate-100 w-full relative">
-                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                    <div className="text-center">
-                        <MapPin className="h-10 w-10 mx-auto mb-3 opacity-50" />
-                        <p className="text-lg font-medium">Map Integration Placeholder</p>
-                        <p className="text-sm">Google Maps Embed would go here</p>
                     </div>
                 </div>
             </section>
