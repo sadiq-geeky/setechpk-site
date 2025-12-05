@@ -31,9 +31,15 @@ export default function Integrations() {
                     <div className="grid md:grid-cols-3 gap-6">
                         <Card className="hover:shadow-lg transition-all border-primary/20">
                             <CardContent className="pt-6 text-center">
-                                <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-4 text-orange-600 font-bold text-xl">
-                                    Z
-                                </div>
+                                <a href="https://zapier.com" target="_blank" rel="noopener noreferrer" className="block">
+                                    <div className="h-24 flex items-center justify-center mx-auto mb-6 bg-white rounded-lg p-4">
+                                        <img
+                                            src="/integrations/zapier.png"
+                                            alt="Zapier"
+                                            className="h-20 w-auto object-contain hover:scale-105 transition-transform mix-blend-darken"
+                                        />
+                                    </div>
+                                </a>
                                 <h3 className="text-lg font-bold mb-2">Zapier</h3>
                                 <p className="text-sm text-muted-foreground">
                                     The leader in no-code automation. We build complex Zaps to connect over 5,000 apps.
@@ -42,9 +48,15 @@ export default function Integrations() {
                         </Card>
                         <Card className="hover:shadow-lg transition-all border-primary/20">
                             <CardContent className="pt-6 text-center">
-                                <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4 text-purple-600 font-bold text-xl">
-                                    M
-                                </div>
+                                <a href="https://make.com" target="_blank" rel="noopener noreferrer" className="block">
+                                    <div className="h-24 flex items-center justify-center mx-auto mb-6">
+                                        <img
+                                            src="/integrations/make.png"
+                                            alt="Make.com"
+                                            className="h-20 w-auto object-contain hover:scale-105 transition-transform"
+                                        />
+                                    </div>
+                                </a>
                                 <h3 className="text-lg font-bold mb-2">Make.com</h3>
                                 <p className="text-sm text-muted-foreground">
                                     Visual automation for complex workflows. We design scenarios that handle intricate logic and data transformation.
@@ -53,12 +65,18 @@ export default function Integrations() {
                         </Card>
                         <Card className="hover:shadow-lg transition-all border-primary/20">
                             <CardContent className="pt-6 text-center">
-                                <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4 text-red-600 font-bold text-xl">
-                                    n8n
-                                </div>
+                                <a href="https://n8n.io" target="_blank" rel="noopener noreferrer" className="block">
+                                    <div className="h-24 flex items-center justify-center mx-auto mb-6">
+                                        <img
+                                            src="/integrations/n8n.png"
+                                            alt="n8n"
+                                            className="h-20 w-auto object-contain hover:scale-105 transition-transform"
+                                        />
+                                    </div>
+                                </a>
                                 <h3 className="text-lg font-bold mb-2">n8n</h3>
                                 <p className="text-sm text-muted-foreground">
-                                    Workflow automation for technical teams. We deploy and manage self-hosted n8n instances for maximum control.
+                                    Fair-code workflow automation for tech teams. We leverage n8n for full control and self-hosted solutions.
                                 </p>
                             </CardContent>
                         </Card>
@@ -149,6 +167,11 @@ export default function Integrations() {
                     <Button size="lg" className="rounded-full px-6" asChild>
                         <Link to="/contact">Get a Consultation</Link>
                     </Button>
+
+                    {/* Trademark Disclaimer */}
+                    <p className="text-xs text-muted-foreground mt-8 max-w-2xl mx-auto">
+                        All trademarks, logos, and brand names are the property of their respective owners. Zapier, Make.com, and n8n logos are used to show our integration capabilities. All company, product, and service names are for identification purposes only. Use of these names, trademarks, and brands does not imply endorsement.
+                    </p>
                 </div>
             </section>
         </div>
