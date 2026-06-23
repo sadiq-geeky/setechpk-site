@@ -1,4 +1,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/evotechg/public_html
-    - /bin/rsync -av --delete dist/ $DEPLOYPATH/
+    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/cp -R dist/. $DEPLOYPATH/
