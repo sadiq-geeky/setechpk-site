@@ -1,6 +1,4 @@
 deployment:
   tasks:
-    - npm install
-    - npm run build
     - export DEPLOYPATH=/home/evotechg/public_html
-    - /bin/cp -R dist/* $DEPLOYPATH
+    - /bin/rsync -av --delete dist/ $DEPLOYPATH/
