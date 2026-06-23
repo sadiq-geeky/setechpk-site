@@ -1,8 +1,6 @@
 deployment:
   tasks:
-    - echo "=== Deployment started $(date) ===" >> /home/evotechg/deploy.log
-    - npm install >> /home/evotechg/deploy.log 2>&1
-    - npm run build >> /home/evotechg/deploy.log 2>&1
+    - npm install
+    - npm run build
     - export DEPLOYPATH=/home/evotechg/public_html
-    - /bin/cp -R dist/* $DEPLOYPATH >> /home/evotechg/deploy.log 2>&1
-    - echo "=== Deployment completed $(date) ===" >> /home/evotechg/deploy.log
+    - /bin/cp -R dist/* $DEPLOYPATH
