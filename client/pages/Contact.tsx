@@ -94,7 +94,6 @@ export default function Contact() {
                                         <div>
                                             <h3 className="font-bold text-base mb-1">Email Us</h3>
                                             <p className="text-sm text-muted-foreground">info@setech.pk</p>
-                                            <p className="text-sm text-muted-foreground">support@setech.pk</p>
                                         </div>
                                     </CardContent>
                                 </Card>
