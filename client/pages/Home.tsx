@@ -349,7 +349,7 @@ export default function Home() {
             <section className="py-12">
                 <div className="container-width">
                     <div className="bg-primary rounded-2xl p-8 text-center text-primary-foreground relative overflow-hidden">
-                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+                        <div className="absolute inset-0 bg-slate-950/20 opacity-10"></div>
                         <div className="relative z-10 max-w-2xl mx-auto">
                             <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
                             <p className="text-primary-foreground/90 text-base mb-6">

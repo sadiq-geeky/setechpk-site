@@ -141,7 +141,7 @@ export default function Cxb() {
             <section className="py-16">
                 <div className="container-width">
                     <div className="bg-teal-900 rounded-2xl p-10 text-center text-white relative overflow-hidden">
-                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+                        <div className="absolute inset-0 bg-teal-950/25 opacity-10"></div>
                         <div className="relative z-10 max-w-2xl mx-auto">
                             <h2 className="text-2xl lg:text-3xl font-bold mb-4">Start Delivering Exceptional Experiences</h2>
                             <p className="text-teal-100 text-lg mb-6">
