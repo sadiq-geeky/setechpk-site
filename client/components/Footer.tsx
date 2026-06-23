@@ -21,7 +21,7 @@ export function Footer() {
                             Empowering businesses with cutting-edge technology solutions. We specialize in custom software, cloud integrations, and digital transformation.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-slate-400 hover:text-white transition-colors">
+                            <a href="http://linkedin.com/company/se-tech-pvt" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                                 <Linkedin className="h-4 w-4" />
                             </a>
                             <a href="#" className="text-slate-400 hover:text-white transition-colors">
@@ -30,7 +30,7 @@ export function Footer() {
                             <a href="#" className="text-slate-400 hover:text-white transition-colors">
                                 <Facebook className="h-4 w-4" />
                             </a>
-                            <a href="#" className="text-slate-400 hover:text-white transition-colors">
+                            <a href="https://www.instagram.com/setech._/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                                 <Instagram className="h-4 w-4" />
                             </a>
                         </div>

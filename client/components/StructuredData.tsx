@@ -18,7 +18,9 @@ export function StructuredData() {
                 "addressLocality": "Pakistan"
             },
             "sameAs": [
-                "https://setech.pk"
+                "https://setech.pk",
+                "http://linkedin.com/company/se-tech-pvt",
+                "https://www.instagram.com/setech._/"
             ],
             "contactPoint": {
                 "@type": "ContactPoint",

@@ -23,6 +23,7 @@ export function Navbar() {
     }, [location]);
 
     const navLinks = [
+        { name: "SetCRM", href: "/products/set-crm" },
         { name: "Services", href: "/services" },
         { name: "Products", href: "/products" },
         { name: "Projects", href: "/projects" },
