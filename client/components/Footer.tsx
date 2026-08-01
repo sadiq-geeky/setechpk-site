@@ -83,7 +83,7 @@ export function Footer() {
                 <div className="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
                     <p>&copy; {currentYear} SE TECH Pvt Ltd. All rights reserved.</p>
                     <div className="flex gap-6">
-                        <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>

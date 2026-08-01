@@ -17,6 +17,7 @@ import FreshBasket from "@/pages/projects/FreshBasket";
 import ApplyNext from "@/pages/projects/ApplyNext";
 import Integrations from "@/pages/Integrations";
 import Contact from "@/pages/Contact";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import NotFound from "@/pages/NotFound";
 
 const App = () => (
@@ -37,6 +38,8 @@ const App = () => (
           <Route path="/projects/applynext-crm" element={<ApplyNext />} />
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
